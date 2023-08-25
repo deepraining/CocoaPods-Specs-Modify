@@ -4,10 +4,10 @@ import os
 specsDir = os.path.expanduser('~') + '/.cocoapods/repos/trunk/Specs/'
 # specsDir = './example/'
 # github 域名
-githubSite = 'https://github.com/'
+githubSite = '"https://github.com/'
 # 替换域名
 # 镜像站点：https://ghproxy.com、https://gitclone.com
-targetSite = 'https://ghproxy.com/https://github.com/'
+targetSite = '"https://ghproxy.com/https://github.com/'
 
 # 更改包计数
 modifyCount = 0
