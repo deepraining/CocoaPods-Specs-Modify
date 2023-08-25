@@ -3,6 +3,7 @@
 .env
 *.pyc
 *.pyo
+*.swp
 env/
 env*
 dist/

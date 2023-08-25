@@ -1,14 +1,13 @@
-# -*- coding: utf-8 -*-
-
 import os
 
 # Specs目录
 specsDir = os.path.expanduser('~') + '/.cocoapods/repos/trunk/Specs/'
 # specsDir = './example/'
 # github 域名
-githubSite = 'github.com/'
+githubSite = 'https://github.com/'
 # 替换域名
-targetSite = 'github.com.cnpmjs.org/'
+# 镜像站点：https://ghproxy.com、https://gitclone.com
+targetSite = 'https://ghproxy.com/https://github.com/'
 
 # 更改包计数
 modifyCount = 0
