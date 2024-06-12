@@ -1,0 +1,32 @@
+# -*- coding: utf-8 -*-
+
+import os
+
+# Specs目录
+specsDir = os.path.expanduser('~') + '/.cocoapods/repos/trunk/Specs/'
+# specsDir = './example/'
+# github 域名
+githubSite = 'github.com/'
+# 替换域名
+targetSite = 'github.com.cnpmjs.org/'
+
+# 更改包计数
+modifyCount = 0
+
+def modifyFile(filePath):
+    f = open(filePath, 'r')
+    content = f.read()
+    f.close()
+    if content.find(targetSite) > -1:
+        global modifyCount
+        modifyCount += 1
+        newContent = content.replace(targetSite, githubSite)
+        f2 = open(filePath, 'w')
+        f2.write(newContent)
+        f2.close()
+
+for root, dirs, files in os.walk(specsDir, topdown=False):
+    for name in files:
+        modifyFile(os.path.join(root, name))
+
+print(f'完成，更改包{modifyCount}个')
